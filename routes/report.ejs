@@ -1,0 +1,56 @@
+<html>
+
+<head>
+    <style>
+        table {
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <h3 style="text-align: center;">Suhasra Educational Institute</h3>
+    <table>
+        <tr>
+            <th>Name: <%= name %></th>
+            <th>Email: <%= email %></th>
+        </tr>
+        <tr>
+            <th>Contact Number: <%= contactNumber %></th>
+            <th>Payment Method: <%= paymentMethod %></th>
+        </tr>
+    </table>
+
+    <h3>Teachers Details</h3>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Subjects</th>
+            <th>Fee</th>
+            <th>Sub Total</th>
+        </tr>
+        <%= if(teacherDetails.length > 0){ %>
+            <%= teacherDetails.forEach(product =>{ %>
+                <tr>
+                    <td><%= teacher.name %></td>
+                    <td><%= teacher.subject %></td>
+                    <td><%= teacher.fee %></td>
+                    <td><%= teacher.total %></td>
+                </tr>
+                <%=});%>
+                <%=}%>
+    </table>
+    <h3>Total: <%= totalAmount %></h3>
+    <h3>Thank You!</h3>
+</body>
+
+</html>
