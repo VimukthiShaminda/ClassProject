@@ -38,16 +38,16 @@
             <th>Fee</th>
             <th>Sub Total</th>
         </tr>
-        <%= if(teacherDetails.length > 0){ %>
-            <%= teacherDetails.forEach(product =>{ %>
+        <% if(teacherDetails.length > 0){ %>
+            <% teacherDetails.forEach(teacher =>{ %>
                 <tr>
                     <td><%= teacher.name %></td>
                     <td><%= teacher.subject %></td>
                     <td><%= teacher.fee %></td>
                     <td><%= teacher.total %></td>
                 </tr>
-                <%=});%>
-                <%=}%>
+            <% }); %>
+        <% } %>
     </table>
     <h3>Total: <%= totalAmount %></h3>
     <h3>Thank You!</h3>

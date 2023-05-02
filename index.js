@@ -1,10 +1,11 @@
 const express = require('express')
 var cors = require('cors')
 const connection = require('./connection')
-const userRoute = require('./routes/user')
-const subjectRoute = require('./routes/subjects')
-const teacherRoute = require('./routes/teachers')
-const billRoute = require('./routes/bill')
+const userRoute = require('./backend/routes/user')
+const subjectRoute = require('./backend/routes/subjects')
+const teacherRoute = require('./backend/routes/teachers')
+const billRoute = require('./backend/routes/bill')
+const dashboardRoute = require('./backend/routes/dashboard')
 const app = express()
 
 app.use(cors())
@@ -14,5 +15,6 @@ app.use('/user',userRoute)
 app.use('/subjects',subjectRoute)
 app.use('/teachers',teacherRoute)
 app.use('/bill',billRoute)
+app.use('/dashboard',dashboardRoute)
 
 module.exports = app

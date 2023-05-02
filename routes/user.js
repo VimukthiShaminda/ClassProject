@@ -1,12 +1,12 @@
 const express = require('express')
-const connection = require('../connection')
+const connection = require('../../connection')
 const router = express.Router()
 
 const jwt = require('jsonwebtoken')
 const nodemailer = require('nodemailer')
 require('dotenv').config()
-var auth = require('../services/authentication')
-var checkRole = require('../services/checkRole')
+var auth = require('../../services/authentication')
+var checkRole = require('../../services/checkRole')
 
 
 
